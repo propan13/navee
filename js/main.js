@@ -102,3 +102,15 @@ openBurgerMenu.addEventListener('click', function(e) {
 menu.addEventListener('click', function(e) {
     menu.classList.remove("show");
 });
+
+// Animate
+wow = new WOW(
+    {
+        animateClass: 'animated',
+        offset:       250,
+        callback:     function(box) {
+            console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+        }
+    }
+);
+wow.init();
